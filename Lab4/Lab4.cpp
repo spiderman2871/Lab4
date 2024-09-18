@@ -13,10 +13,41 @@ void printMenu() {
 	cout << "Your Selection: ";
 }
 void factorial() {
-	// I recommend writing your factorial code here
+	int n;
+	long long x = 1;
+	cout << "Enter a number:" << endl;
+	cin >> n;
+
+	if (n < 0) {
+		cout << "Enter a POSITIVE number:";
+		cin >> n;
+	}
+	else {
+		for (int i = 1; i <= n; i++) {
+			x *= i;
+		}
+		cout << "The factorial of " << n << " is " << x << endl;
+
+	}
 }
 void arithmetic() {
-	// I recommend writing your arithmetic series code here
+	int x;
+	int y;
+	int z;
+	int result = 0;
+
+	cout << "Enter a number to start at:";
+	cin >> x; 
+	cout << "Enter a number to add:";
+	cin >> y;
+	cout << "Enter the number of elements in a series:";
+	cin >> z;
+
+	for (int i = 1; i < z; i++) {
+		result += x;
+		x += y;
+	}
+	cout << result << endl;
 }
 void geometric() {
 	// I recommend writing your geometric series code here
